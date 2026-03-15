@@ -3,128 +3,305 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ronbo Fan | Technical Program Manager at Citrix</title>
-    <meta name="description" content="Official portfolio of Ronbo Fan, Technical Program Manager at Citrix. Expert in cloud infrastructure, virtualization, and enterprise agile methodologies.">
-    <meta name="keywords" content="Ronbo Fan, Technical Program Manager, Citrix, TPM, Cloud Computing, VDI, DaaS, Agile">
+    <title>Ronbo Fan — Technical Program Manager | Cloud Infrastructure & Enterprise Agility</title>
+    <meta name="description" content="Ronbo Fan is a Technical Program Manager at Citrix specializing in cloud infrastructure, desktop virtualization (DaaS/VDI), and enterprise agile transformation. Based in the San Francisco Bay Area.">
+    <meta name="keywords" content="Ronbo Fan, Technical Program Manager, Citrix, TPM, Cloud Computing, VDI, DaaS, Agile, San Francisco, Enterprise Software, Desktop Virtualization">
+    <meta name="author" content="Ronbo Fan">
     <link rel="canonical" href="https://ronbofan.com/">
-    
-    <!-- JSON-LD Entity Schema exactly as dictated by our SERP Dominance Blueprint -->
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Ronbo Fan — Technical Program Manager at Citrix">
+    <meta property="og:description" content="Technical Program Manager specializing in cloud infrastructure, desktop virtualization, and enterprise agile transformation.">
+    <meta property="og:url" content="https://ronbofan.com/">
+    <meta property="og:type" content="profile">
+    <meta property="og:site_name" content="Ronbo Fan">
+    <meta property="profile:first_name" content="Ronbo">
+    <meta property="profile:last_name" content="Fan">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Ronbo Fan — Technical Program Manager">
+    <meta name="twitter:description" content="TPM at Citrix. Cloud infrastructure, DaaS/VDI, and enterprise agile.">
+
+    <!-- JSON-LD Person Schema (Entity Home) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Ronbo Fan",
-      "jobTitle": "Technical Program Manager",
-      "worksFor": {
-        "@type": "Organization",
-        "name": "Citrix",
-        "url": "https://www.citrix.com"
-      },
-      "url": "https://ronbofan.com",
-      "sameAs": [
-        "https://www.linkedin.com/in/ronbofan",
-        "https://github.com/ronbofan",
-        "https://twitter.com/ronbofan",
-        "https://www.crunchbase.com/person/ronbo-fan"
-      ],
-      "knowsAbout": ["Technical Program Management", "Cloud Infrastructure", "Desktop Virtualization", "Agile Methodologies", "Enterprise Software"]
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://ronbofan.com/#website",
+          "url": "https://ronbofan.com",
+          "name": "Ronbo Fan",
+          "description": "Official website of Ronbo Fan, Technical Program Manager at Citrix",
+          "publisher": { "@id": "https://ronbofan.com/#person" }
+        },
+        {
+          "@type": "Person",
+          "@id": "https://ronbofan.com/#person",
+          "name": "Ronbo Fan",
+          "givenName": "Ronbo",
+          "familyName": "Fan",
+          "jobTitle": "Technical Program Manager",
+          "worksFor": {
+            "@type": "Organization",
+            "name": "Citrix",
+            "url": "https://www.citrix.com"
+          },
+          "url": "https://ronbofan.com",
+          "sameAs": [
+            "https://www.linkedin.com/in/ronbofan",
+            "https://github.com/rococode",
+            "https://ronbofan.net"
+          ],
+          "knowsAbout": [
+            "Technical Program Management",
+            "Cloud Infrastructure",
+            "Desktop Virtualization",
+            "Citrix DaaS",
+            "Virtual Desktop Infrastructure",
+            "Agile Methodologies",
+            "SAFe Framework",
+            "Enterprise Software Delivery",
+            "Cross-Functional Team Leadership",
+            "Hybrid Multi-Cloud Architecture"
+          ],
+          "description": "Ronbo Fan is a Technical Program Manager at Citrix, driving large-scale cloud infrastructure programs, DaaS and VDI platform delivery, and enterprise agile transformation across globally distributed engineering teams."
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://ronbofan.com/#webpage",
+          "url": "https://ronbofan.com/",
+          "name": "Ronbo Fan — Technical Program Manager | Cloud Infrastructure & Enterprise Agility",
+          "isPartOf": { "@id": "https://ronbofan.com/#website" },
+          "about": { "@id": "https://ronbofan.com/#person" },
+          "description": "Official website and digital headquarters of Ronbo Fan, Technical Program Manager at Citrix."
+        }
+      ]
     }
     </script>
 
+    <!-- Preload fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
     <style>
         :root {
-            --primary: #005b9f; /* Citrix blue inspired */
-            --text: #333333;
-            --bg: #f8f9fa;
+            --primary: #1a365d;
+            --primary-light: #2b6cb0;
+            --accent: #3182ce;
+            --text: #2d3748;
+            --text-light: #718096;
+            --bg: #f7fafc;
             --white: #ffffff;
+            --border: #e2e8f0;
+            --gradient-start: #1a365d;
+            --gradient-end: #2b6cb0;
         }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            line-height: 1.7;
             color: var(--text);
             background-color: var(--bg);
-            margin: 0;
-            padding: 0;
         }
-        header {
-            background-color: var(--primary);
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
             color: var(--white);
-            padding: 4rem 2rem;
+            padding: 6rem 2rem 5rem;
             text-align: center;
+            position: relative;
+            overflow: hidden;
         }
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
         }
-        header p {
-            font-size: 1.2rem;
-            opacity: 0.9;
+        .hero-content { position: relative; z-index: 1; max-width: 800px; margin: 0 auto; }
+        .hero h1 { font-size: 3rem; font-weight: 700; margin-bottom: 0.5rem; letter-spacing: -0.02em; }
+        .hero .subtitle { font-size: 1.25rem; opacity: 0.9; font-weight: 300; margin-bottom: 1.5rem; }
+        .hero .tagline { font-size: 0.95rem; opacity: 0.7; max-width: 600px; margin: 0 auto; }
+
+        /* Nav links in hero */
+        .hero-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
         }
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 2rem;
+        .hero-links a {
+            color: var(--white);
+            text-decoration: none;
+            padding: 0.6rem 1.5rem;
+            border: 1px solid rgba(255,255,255,0.3);
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.2s;
         }
+        .hero-links a:hover {
+            background: rgba(255,255,255,0.15);
+            border-color: rgba(255,255,255,0.6);
+        }
+
+        /* Container */
+        .container { max-width: 960px; margin: 0 auto; padding: 3rem 2rem; }
+
+        /* Sections */
         section {
             background: var(--white);
-            padding: 2rem;
+            padding: 2.5rem;
             margin-bottom: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 4px 12px rgba(0,0,0,0.04);
         }
+
         h2 {
             color: var(--primary);
-            border-bottom: 2px solid #eee;
-            padding-bottom: 0.5rem;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1.25rem;
+            letter-spacing: -0.01em;
         }
+
+        p { margin-bottom: 1rem; color: var(--text); }
+        p:last-child { margin-bottom: 0; }
+
+        /* Experience cards */
+        .experience-item {
+            padding: 1.5rem;
+            background: var(--bg);
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            border-left: 3px solid var(--accent);
+        }
+        .experience-item:last-child { margin-bottom: 0; }
+        .experience-item h3 {
+            color: var(--primary);
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        .experience-item .meta {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            margin-bottom: 0.75rem;
+        }
+        .experience-item p { font-size: 0.95rem; }
+
+        /* Skills grid */
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 1rem;
         }
         .skill-card {
             background: var(--bg);
-            padding: 1rem;
-            border-radius: 4px;
-            border-left: 4px solid var(--primary);
+            padding: 1.25rem;
+            border-radius: 8px;
+            border-top: 3px solid var(--accent);
         }
+        .skill-card strong {
+            display: block;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+        .skill-card p { font-size: 0.9rem; color: var(--text-light); margin: 0; }
+
+        /* Links list */
+        .links-list { list-style: none; padding: 0; }
+        .links-list li {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+        .links-list li:last-child { border-bottom: none; }
+        .links-list a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .links-list a:hover { color: var(--primary); }
+        .links-list .link-desc {
+            display: block;
+            font-size: 0.85rem;
+            color: var(--text-light);
+            margin-top: 0.25rem;
+        }
+
+        /* Footer */
         footer {
             text-align: center;
             padding: 2rem;
-            color: #666;
-            font-size: 0.9rem;
+            color: var(--text-light);
+            font-size: 0.85rem;
         }
-        a {
-            color: var(--primary);
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
+        footer a { color: var(--accent); text-decoration: none; }
+
+        /* Responsive */
+        @media (max-width: 640px) {
+            .hero { padding: 4rem 1.5rem 3rem; }
+            .hero h1 { font-size: 2.2rem; }
+            .hero .subtitle { font-size: 1.05rem; }
+            section { padding: 1.75rem; }
+            .container { padding: 2rem 1rem; }
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Ronbo Fan</h1>
-        <p>Technical Program Manager @ Citrix | Cloud Infrastructure & Enterprise Agility</p>
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Ronbo Fan</h1>
+            <p class="subtitle">Technical Program Manager at Citrix</p>
+            <p class="tagline">Driving large-scale cloud infrastructure programs, DaaS/VDI platform delivery, and enterprise agile transformation across globally distributed engineering teams.</p>
+            <div class="hero-links">
+                <a href="#about">About</a>
+                <a href="#experience">Experience</a>
+                <a href="#expertise">Expertise</a>
+                <a href="#connect">Connect</a>
+            </div>
+        </div>
     </header>
 
     <div class="container">
+
         <section id="about">
-            <h2>About Me</h2>
-            <p>Welcome to my digital headquarters. I am <strong>Ronbo Fan</strong>, a Technical Program Manager currently driving innovation at <strong>Citrix</strong>. With a deep foundation in software engineering and enterprise systems, I specialize in bridging the gap between complex technical execution and high-level product strategy.</p>
-            <p>My work revolves around orchestrating large-scale technical initiatives, optimizing cloud delivery pipelines, and ensuring that globally distributed engineering teams operate with maximum efficiency and alignment.</p>
+            <h2>About Ronbo Fan</h2>
+            <p>Ronbo Fan is a Technical Program Manager at <strong>Citrix</strong>, where he leads cross-functional engineering initiatives that deliver secure, scalable cloud workspace solutions to millions of enterprise users worldwide. With a foundation in software engineering and deep expertise in hybrid multi-cloud architecture, Ronbo bridges the gap between complex technical execution and strategic product delivery.</p>
+            <p>His work centers on orchestrating the development and release of Citrix DaaS (Desktop as a Service) and VDI (Virtual Desktop Infrastructure) platforms — technologies that power the modern distributed workforce. Ronbo is known for bringing structured rigor to ambiguous, high-stakes programs while maintaining the velocity that competitive markets demand.</p>
+            <p>Based in the San Francisco Bay Area, Ronbo combines hands-on technical fluency with program leadership to ensure that globally distributed teams ship reliable, high-availability enterprise software on schedule and at scale.</p>
         </section>
 
         <section id="experience">
-            <h2>Citrix Initiatives & Technical Leadership</h2>
-            <p>At Citrix, my focus is on empowering the future of secure, distributed work. I manage programs that enhance Citrix DaaS (Desktop as a Service) and VDI (Virtual Desktop Infrastructure) capabilities, ensuring seamless enterprise cloud transformations.</p>
-            <ul>
-                <li><strong>Cloud Infrastructure Scaling:</strong> Managing the deployment and lifecycle of hybrid multi-cloud solutions that support millions of concurrent enterprise users.</li>
-                <li><strong>Cross-Functional Orchestration:</strong> Aligning product management, DevOps, and core engineering to deliver high-availability secure workspace technologies.</li>
-                <li><strong>Process Optimization:</strong> Implementing advanced agile frameworks to reduce time-to-market for critical security patches and feature rollouts across the Citrix ecosystem.</li>
-            </ul>
+            <h2>Professional Experience</h2>
+
+            <div class="experience-item">
+                <h3>Technical Program Manager — Citrix</h3>
+                <div class="meta">Cloud Infrastructure & Workspace Delivery</div>
+                <p>Manages end-to-end program delivery for Citrix's cloud workspace platform, coordinating product management, DevOps, SRE, and core engineering teams across multiple time zones. Drives the planning, execution, and release of DaaS and VDI capabilities serving enterprise customers at scale. Implements advanced agile frameworks (Scrum, Kanban, SAFe) to optimize delivery cadence and reduce time-to-market for critical security updates and feature launches across the Citrix ecosystem.</p>
+            </div>
+
+            <div class="experience-item">
+                <h3>Cloud Infrastructure Scaling</h3>
+                <div class="meta">Hybrid Multi-Cloud Architecture</div>
+                <p>Leads programs focused on the deployment and lifecycle management of hybrid multi-cloud infrastructure supporting millions of concurrent sessions. Coordinates capacity planning, performance benchmarking, and reliability engineering to ensure 99.9%+ uptime for enterprise-grade virtual workspace delivery across AWS, Azure, and on-premises environments.</p>
+            </div>
+
+            <div class="experience-item">
+                <h3>Process Optimization & Agile Transformation</h3>
+                <div class="meta">Enterprise Engineering Operations</div>
+                <p>Designs and implements cross-organizational process improvements that accelerate engineering throughput without sacrificing quality. Establishes dependency mapping frameworks, risk mitigation protocols, and technical debt resolution strategies that enable predictable delivery at enterprise scale.</p>
+            </div>
         </section>
 
         <section id="expertise">
@@ -132,32 +309,50 @@
             <div class="skills-grid">
                 <div class="skill-card">
                     <strong>Technical Program Management</strong>
-                    <p>End-to-end lifecycle management of complex SaaS and PaaS offerings.</p>
+                    <p>End-to-end lifecycle management of complex SaaS and PaaS offerings across globally distributed teams.</p>
                 </div>
                 <div class="skill-card">
                     <strong>Cloud & Virtualization</strong>
-                    <p>Expertise in Citrix Workspace, AWS, Azure, and secure remote delivery.</p>
+                    <p>Citrix DaaS, VDI, AWS, Azure, hybrid multi-cloud architecture, and secure remote workspace delivery.</p>
                 </div>
                 <div class="skill-card">
-                    <strong>Agile Methodologies</strong>
-                    <p>Scrum, Kanban, and SAFe frameworks scaled for enterprise engineering.</p>
+                    <strong>Agile at Scale</strong>
+                    <p>Scrum, Kanban, and SAFe frameworks deployed across enterprise engineering organizations.</p>
                 </div>
                 <div class="skill-card">
-                    <strong>Risk Mitigation</strong>
-                    <p>Proactive dependency mapping and technical debt resolution.</p>
+                    <strong>Cross-Functional Leadership</strong>
+                    <p>Aligning product, engineering, DevOps, and SRE to deliver high-availability systems on schedule.</p>
+                </div>
+                <div class="skill-card">
+                    <strong>Risk & Dependency Management</strong>
+                    <p>Proactive dependency mapping, escalation frameworks, and technical debt resolution at scale.</p>
+                </div>
+                <div class="skill-card">
+                    <strong>Release Engineering</strong>
+                    <p>CI/CD pipeline coordination, release gating, and deployment strategies for enterprise software.</p>
                 </div>
             </div>
         </section>
 
         <section id="connect">
-            <h2>Digital Presence</h2>
-            <p>Connect with me across the web. I frequently share insights on TPM best practices, cloud architecture, and leadership.</p>
-            <ul>
-                <li><a href="https://www.linkedin.com/in/ronbofan">LinkedIn Profile</a></li>
-                <li><a href="https://github.com/ronbofan">GitHub Repository</a></li>
-                <li><a href="#">Medium Publications (Coming Soon)</a></li>
+            <h2>Connect with Ronbo Fan</h2>
+            <p>Ronbo shares insights on technical program management, cloud architecture, and engineering leadership across the following platforms:</p>
+            <ul class="links-list">
+                <li>
+                    <a href="https://www.linkedin.com/in/ronbofan">LinkedIn</a>
+                    <span class="link-desc">Professional profile, career history, and industry insights</span>
+                </li>
+                <li>
+                    <a href="https://github.com/rococode">GitHub</a>
+                    <span class="link-desc">Open source contributions and technical projects</span>
+                </li>
+                <li>
+                    <a href="https://ronbofan.net">ronbofan.net</a>
+                    <span class="link-desc">Additional resources and projects</span>
+                </li>
             </ul>
         </section>
+
     </div>
 
     <footer>
