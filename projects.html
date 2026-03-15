@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects — Ronbo Fan | Technical Initiatives & Case Studies</title>
+    <meta name="description" content="Technical projects and case studies by Ronbo Fan. Explore cloud infrastructure programs, automation initiatives, and engineering tooling built by a Technical Program Manager at Citrix.">
+    <meta name="author" content="Ronbo Fan">
+    <link rel="canonical" href="https://ronbofan.com/projects">
+    <meta property="og:title" content="Projects — Ronbo Fan">
+    <meta property="og:description" content="Technical projects and engineering case studies by Ronbo Fan.">
+    <meta property="og:url" content="https://ronbofan.com/projects">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "@id": "https://ronbofan.com/projects#page",
+      "url": "https://ronbofan.com/projects",
+      "name": "Projects — Ronbo Fan",
+      "isPartOf": { "@id": "https://ronbofan.com/#website" },
+      "about": { "@id": "https://ronbofan.com/#person" }
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+    <nav class="site-nav">
+        <a href="/" class="logo">Ronbo Fan</a>
+        <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Toggle navigation">☰</button>
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/experience">Experience</a></li>
+            <li><a href="/projects" class="active">Projects</a></li>
+            <li><a href="/insights">Insights</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="page-header">
+        <h1>Projects & Technical Initiatives</h1>
+        <p>Selected case studies from enterprise cloud infrastructure and engineering programs</p>
+    </header>
+
+    <div class="container">
+
+        <section>
+            <h2>Enterprise Cloud Programs</h2>
+
+            <div class="project-card">
+                <h3>Hybrid Multi-Cloud Workspace Platform</h3>
+                <div class="meta">Citrix | Cloud Infrastructure</div>
+                <p>Led the program delivery for a major initiative to extend Citrix's workspace platform across hybrid multi-cloud environments. The program required coordinating infrastructure provisioning across AWS and Azure while maintaining seamless interoperability with on-premises deployments. Ronbo Fan managed cross-functional dependencies across six engineering teams, established release gating criteria, and delivered the capability on schedule with zero critical defects at GA.</p>
+                <div class="tech-stack">
+                    <span class="tech-tag">AWS</span>
+                    <span class="tech-tag">Azure</span>
+                    <span class="tech-tag">Kubernetes</span>
+                    <span class="tech-tag">Terraform</span>
+                    <span class="tech-tag">Citrix Cloud</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3>DaaS Platform Scalability Program</h3>
+                <div class="meta">Citrix | Desktop as a Service</div>
+                <p>Managed the end-to-end program for scaling Citrix's Desktop-as-a-Service platform to support significantly higher concurrent session counts for enterprise customers. The initiative involved capacity planning, performance benchmarking, database optimization, and load balancer tuning across multiple regions. Ronbo Fan coordinated performance engineering, SRE, and product teams to establish baseline metrics, identify bottlenecks, and deliver a 3x improvement in concurrent session capacity.</p>
+                <div class="tech-stack">
+                    <span class="tech-tag">DaaS</span>
+                    <span class="tech-tag">Performance Engineering</span>
+                    <span class="tech-tag">Load Testing</span>
+                    <span class="tech-tag">Capacity Planning</span>
+                    <span class="tech-tag">SRE</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3>Enterprise Release Operations Overhaul</h3>
+                <div class="meta">Citrix | DevOps & Process</div>
+                <p>Designed and implemented a comprehensive release operations framework for Citrix's cloud workspace division. The program replaced an ad-hoc release process with a structured, automated pipeline incorporating automated regression testing, staged canary deployments, feature flag management, and real-time rollback capabilities. This initiative reduced the average release cycle from weeks to days while improving deployment reliability.</p>
+                <div class="tech-stack">
+                    <span class="tech-tag">CI/CD</span>
+                    <span class="tech-tag">Jenkins</span>
+                    <span class="tech-tag">ArgoCD</span>
+                    <span class="tech-tag">Feature Flags</span>
+                    <span class="tech-tag">Canary Deployments</span>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Engineering Tooling & Automation</h2>
+
+            <div class="project-card">
+                <h3>Program Health Dashboard</h3>
+                <div class="meta">Internal Tooling</div>
+                <p>Built an automated program health dashboard that aggregates data from Jira, GitHub, CI/CD pipelines, and incident management systems into a single executive-facing view. The dashboard provides real-time visibility into sprint velocity, release readiness, test coverage, and open risk items, enabling data-driven program decisions and reducing weekly status meeting preparation time by 80%.</p>
+                <div class="tech-stack">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">REST APIs</span>
+                    <span class="tech-tag">Jira</span>
+                    <span class="tech-tag">Grafana</span>
+                    <span class="tech-tag">Data Visualization</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3>Dependency Mapping & Risk Engine</h3>
+                <div class="meta">Internal Tooling</div>
+                <p>Developed an automated dependency mapping tool that scans cross-team Jira epics, identifies critical-path dependencies, and generates risk assessments with recommended mitigation strategies. The tool has been adopted across multiple program teams and has contributed to a 40% reduction in dependency-related delivery delays.</p>
+                <div class="tech-stack">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Graph Analysis</span>
+                    <span class="tech-tag">Jira API</span>
+                    <span class="tech-tag">Risk Modeling</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3>Agile Metrics & Forecasting System</h3>
+                <div class="meta">Process Optimization</div>
+                <p>Created a metrics collection and forecasting system that tracks team velocity, sprint completion rates, and defect density trends over time. The system uses historical data to generate probabilistic delivery forecasts, helping product managers and engineering leaders make informed scope and timeline decisions during PI planning ceremonies.</p>
+                <div class="tech-stack">
+                    <span class="tech-tag">Analytics</span>
+                    <span class="tech-tag">Forecasting</span>
+                    <span class="tech-tag">SAFe</span>
+                    <span class="tech-tag">JavaScript</span>
+                    <span class="tech-tag">SQL</span>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Open Source & Community</h2>
+            <p>Ronbo Fan contributes to open source projects and shares engineering tools on <a href="https://github.com/rococode">GitHub</a>. He believes in the power of open collaboration to accelerate innovation and is an advocate for building in public wherever possible.</p>
+            <a href="https://github.com/rococode" class="cta-btn">View GitHub Profile →</a>
+        </section>
+
+    </div>
+
+    <footer>
+        <div class="footer-links">
+            <a href="/about">About</a>
+            <a href="/experience">Experience</a>
+            <a href="/projects">Projects</a>
+            <a href="/insights">Insights</a>
+            <a href="/contact">Contact</a>
+        </div>
+        <p>&copy; 2026 Ronbo Fan. All rights reserved. | <a href="https://ronbofan.com">ronbofan.com</a></p>
+    </footer>
+
+</body>
+</html>

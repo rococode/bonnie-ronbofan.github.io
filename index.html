@@ -5,11 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ronbo Fan — Technical Program Manager | Cloud Infrastructure & Enterprise Agility</title>
     <meta name="description" content="Ronbo Fan is a Technical Program Manager at Citrix specializing in cloud infrastructure, desktop virtualization (DaaS/VDI), and enterprise agile transformation. Based in the San Francisco Bay Area.">
-    <meta name="keywords" content="Ronbo Fan, Technical Program Manager, Citrix, TPM, Cloud Computing, VDI, DaaS, Agile, San Francisco, Enterprise Software, Desktop Virtualization">
+    <meta name="keywords" content="Ronbo Fan, Technical Program Manager, Citrix, TPM, Cloud Computing, VDI, DaaS, Agile, San Francisco, Enterprise Software">
     <meta name="author" content="Ronbo Fan">
     <link rel="canonical" href="https://ronbofan.com/">
-
-    <!-- Open Graph -->
     <meta property="og:title" content="Ronbo Fan — Technical Program Manager at Citrix">
     <meta property="og:description" content="Technical Program Manager specializing in cloud infrastructure, desktop virtualization, and enterprise agile transformation.">
     <meta property="og:url" content="https://ronbofan.com/">
@@ -17,13 +15,9 @@
     <meta property="og:site_name" content="Ronbo Fan">
     <meta property="profile:first_name" content="Ronbo">
     <meta property="profile:last_name" content="Fan">
-
-    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Ronbo Fan — Technical Program Manager">
     <meta name="twitter:description" content="TPM at Citrix. Cloud infrastructure, DaaS/VDI, and enterprise agile.">
-
-    <!-- JSON-LD Person Schema (Entity Home) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -80,196 +74,31 @@
       ]
     }
     </script>
-
-    <!-- Preload fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <style>
-        :root {
-            --primary: #1a365d;
-            --primary-light: #2b6cb0;
-            --accent: #3182ce;
-            --text: #2d3748;
-            --text-light: #718096;
-            --bg: #f7fafc;
-            --white: #ffffff;
-            --border: #e2e8f0;
-            --gradient-start: #1a365d;
-            --gradient-end: #2b6cb0;
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            line-height: 1.7;
-            color: var(--text);
-            background-color: var(--bg);
-        }
-
-        /* Hero */
-        .hero {
-            background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
-            color: var(--white);
-            padding: 6rem 2rem 5rem;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-        }
-        .hero-content { position: relative; z-index: 1; max-width: 800px; margin: 0 auto; }
-        .hero h1 { font-size: 3rem; font-weight: 700; margin-bottom: 0.5rem; letter-spacing: -0.02em; }
-        .hero .subtitle { font-size: 1.25rem; opacity: 0.9; font-weight: 300; margin-bottom: 1.5rem; }
-        .hero .tagline { font-size: 0.95rem; opacity: 0.7; max-width: 600px; margin: 0 auto; }
-
-        /* Nav links in hero */
-        .hero-links {
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            margin-top: 2rem;
-            flex-wrap: wrap;
-        }
-        .hero-links a {
-            color: var(--white);
-            text-decoration: none;
-            padding: 0.6rem 1.5rem;
-            border: 1px solid rgba(255,255,255,0.3);
-            border-radius: 6px;
-            font-size: 0.9rem;
-            font-weight: 500;
-            transition: all 0.2s;
-        }
-        .hero-links a:hover {
-            background: rgba(255,255,255,0.15);
-            border-color: rgba(255,255,255,0.6);
-        }
-
-        /* Container */
-        .container { max-width: 960px; margin: 0 auto; padding: 3rem 2rem; }
-
-        /* Sections */
-        section {
-            background: var(--white);
-            padding: 2.5rem;
-            margin-bottom: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 4px 12px rgba(0,0,0,0.04);
-        }
-
-        h2 {
-            color: var(--primary);
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 1.25rem;
-            letter-spacing: -0.01em;
-        }
-
-        p { margin-bottom: 1rem; color: var(--text); }
-        p:last-child { margin-bottom: 0; }
-
-        /* Experience cards */
-        .experience-item {
-            padding: 1.5rem;
-            background: var(--bg);
-            border-radius: 8px;
-            margin-bottom: 1rem;
-            border-left: 3px solid var(--accent);
-        }
-        .experience-item:last-child { margin-bottom: 0; }
-        .experience-item h3 {
-            color: var(--primary);
-            font-size: 1.1rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-        .experience-item .meta {
-            font-size: 0.85rem;
-            color: var(--text-light);
-            margin-bottom: 0.75rem;
-        }
-        .experience-item p { font-size: 0.95rem; }
-
-        /* Skills grid */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 1rem;
-        }
-        .skill-card {
-            background: var(--bg);
-            padding: 1.25rem;
-            border-radius: 8px;
-            border-top: 3px solid var(--accent);
-        }
-        .skill-card strong {
-            display: block;
-            color: var(--primary);
-            margin-bottom: 0.5rem;
-            font-size: 0.95rem;
-        }
-        .skill-card p { font-size: 0.9rem; color: var(--text-light); margin: 0; }
-
-        /* Links list */
-        .links-list { list-style: none; padding: 0; }
-        .links-list li {
-            padding: 0.75rem 0;
-            border-bottom: 1px solid var(--border);
-        }
-        .links-list li:last-child { border-bottom: none; }
-        .links-list a {
-            color: var(--accent);
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.2s;
-        }
-        .links-list a:hover { color: var(--primary); }
-        .links-list .link-desc {
-            display: block;
-            font-size: 0.85rem;
-            color: var(--text-light);
-            margin-top: 0.25rem;
-        }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 2rem;
-            color: var(--text-light);
-            font-size: 0.85rem;
-        }
-        footer a { color: var(--accent); text-decoration: none; }
-
-        /* Responsive */
-        @media (max-width: 640px) {
-            .hero { padding: 4rem 1.5rem 3rem; }
-            .hero h1 { font-size: 2.2rem; }
-            .hero .subtitle { font-size: 1.05rem; }
-            section { padding: 1.75rem; }
-            .container { padding: 2rem 1rem; }
-        }
-    </style>
+    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
+
+    <nav class="site-nav">
+        <a href="/" class="logo">Ronbo Fan</a>
+        <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Toggle navigation">☰</button>
+        <ul class="nav-links">
+            <li><a href="/" class="active">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/experience">Experience</a></li>
+            <li><a href="/projects">Projects</a></li>
+            <li><a href="/insights">Insights</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+    </nav>
 
     <header class="hero">
         <div class="hero-content">
             <h1>Ronbo Fan</h1>
             <p class="subtitle">Technical Program Manager at Citrix</p>
             <p class="tagline">Driving large-scale cloud infrastructure programs, DaaS/VDI platform delivery, and enterprise agile transformation across globally distributed engineering teams.</p>
-            <div class="hero-links">
-                <a href="#about">About</a>
-                <a href="#experience">Experience</a>
-                <a href="#expertise">Expertise</a>
-                <a href="#connect">Connect</a>
-            </div>
         </div>
     </header>
 
@@ -278,33 +107,11 @@
         <section id="about">
             <h2>About Ronbo Fan</h2>
             <p>Ronbo Fan is a Technical Program Manager at <strong>Citrix</strong>, where he leads cross-functional engineering initiatives that deliver secure, scalable cloud workspace solutions to millions of enterprise users worldwide. With a foundation in software engineering and deep expertise in hybrid multi-cloud architecture, Ronbo bridges the gap between complex technical execution and strategic product delivery.</p>
-            <p>His work centers on orchestrating the development and release of Citrix DaaS (Desktop as a Service) and VDI (Virtual Desktop Infrastructure) platforms — technologies that power the modern distributed workforce. Ronbo is known for bringing structured rigor to ambiguous, high-stakes programs while maintaining the velocity that competitive markets demand.</p>
-            <p>Based in the San Francisco Bay Area, Ronbo combines hands-on technical fluency with program leadership to ensure that globally distributed teams ship reliable, high-availability enterprise software on schedule and at scale.</p>
+            <p>His work centers on orchestrating the development and release of Citrix DaaS (Desktop as a Service) and VDI (Virtual Desktop Infrastructure) platforms — technologies that power the modern distributed workforce.</p>
+            <a href="/about" class="cta-btn">Read Full Bio →</a>
         </section>
 
-        <section id="experience">
-            <h2>Professional Experience</h2>
-
-            <div class="experience-item">
-                <h3>Technical Program Manager — Citrix</h3>
-                <div class="meta">Cloud Infrastructure & Workspace Delivery</div>
-                <p>Manages end-to-end program delivery for Citrix's cloud workspace platform, coordinating product management, DevOps, SRE, and core engineering teams across multiple time zones. Drives the planning, execution, and release of DaaS and VDI capabilities serving enterprise customers at scale. Implements advanced agile frameworks (Scrum, Kanban, SAFe) to optimize delivery cadence and reduce time-to-market for critical security updates and feature launches across the Citrix ecosystem.</p>
-            </div>
-
-            <div class="experience-item">
-                <h3>Cloud Infrastructure Scaling</h3>
-                <div class="meta">Hybrid Multi-Cloud Architecture</div>
-                <p>Leads programs focused on the deployment and lifecycle management of hybrid multi-cloud infrastructure supporting millions of concurrent sessions. Coordinates capacity planning, performance benchmarking, and reliability engineering to ensure 99.9%+ uptime for enterprise-grade virtual workspace delivery across AWS, Azure, and on-premises environments.</p>
-            </div>
-
-            <div class="experience-item">
-                <h3>Process Optimization & Agile Transformation</h3>
-                <div class="meta">Enterprise Engineering Operations</div>
-                <p>Designs and implements cross-organizational process improvements that accelerate engineering throughput without sacrificing quality. Establishes dependency mapping frameworks, risk mitigation protocols, and technical debt resolution strategies that enable predictable delivery at enterprise scale.</p>
-            </div>
-        </section>
-
-        <section id="expertise">
+        <section id="highlights">
             <h2>Core Competencies</h2>
             <div class="skills-grid">
                 <div class="skill-card">
@@ -334,9 +141,23 @@
             </div>
         </section>
 
+        <section id="latest">
+            <h2>Latest Insights</h2>
+            <div class="article-card">
+                <div class="date">March 2026</div>
+                <h3><a href="/insights#scaling-cloud">Scaling Cloud Infrastructure: Lessons from Enterprise DaaS Deployments</a></h3>
+                <p>Key insights from orchestrating hybrid multi-cloud deployments supporting millions of concurrent enterprise sessions across AWS, Azure, and on-premises environments.</p>
+            </div>
+            <div class="article-card">
+                <div class="date">February 2026</div>
+                <h3><a href="/insights#agile-distributed">Agile at Scale: Running SAFe Across Distributed Engineering Teams</a></h3>
+                <p>Practical strategies for implementing SAFe frameworks when your engineering organization spans multiple continents and time zones.</p>
+            </div>
+            <a href="/insights" class="cta-btn">All Insights →</a>
+        </section>
+
         <section id="connect">
             <h2>Connect with Ronbo Fan</h2>
-            <p>Ronbo shares insights on technical program management, cloud architecture, and engineering leadership across the following platforms:</p>
             <ul class="links-list">
                 <li>
                     <a href="https://www.linkedin.com/in/ronbofan">LinkedIn</a>
@@ -351,11 +172,19 @@
                     <span class="link-desc">Additional resources and projects</span>
                 </li>
             </ul>
+            <a href="/contact" class="cta-btn">Get in Touch →</a>
         </section>
 
     </div>
 
     <footer>
+        <div class="footer-links">
+            <a href="/about">About</a>
+            <a href="/experience">Experience</a>
+            <a href="/projects">Projects</a>
+            <a href="/insights">Insights</a>
+            <a href="/contact">Contact</a>
+        </div>
         <p>&copy; 2026 Ronbo Fan. All rights reserved. | <a href="https://ronbofan.com">ronbofan.com</a></p>
     </footer>
 

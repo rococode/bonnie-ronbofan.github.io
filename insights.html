@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insights — Ronbo Fan | Technical Leadership & Cloud Architecture</title>
+    <meta name="description" content="Articles and insights by Ronbo Fan on technical program management, cloud infrastructure, enterprise agile, and engineering leadership. Practical strategies from a TPM at Citrix.">
+    <meta name="author" content="Ronbo Fan">
+    <link rel="canonical" href="https://ronbofan.com/insights">
+    <meta property="og:title" content="Insights — Ronbo Fan">
+    <meta property="og:description" content="Articles on technical program management, cloud infrastructure, and engineering leadership by Ronbo Fan.">
+    <meta property="og:url" content="https://ronbofan.com/insights">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "@id": "https://ronbofan.com/insights#blog",
+      "url": "https://ronbofan.com/insights",
+      "name": "Insights by Ronbo Fan",
+      "description": "Articles on technical program management, cloud infrastructure, and engineering leadership",
+      "isPartOf": { "@id": "https://ronbofan.com/#website" },
+      "author": { "@id": "https://ronbofan.com/#person" },
+      "blogPost": [
+        {
+          "@type": "BlogPosting",
+          "headline": "Scaling Cloud Infrastructure: Lessons from Enterprise DaaS Deployments",
+          "author": { "@id": "https://ronbofan.com/#person" },
+          "datePublished": "2026-03-01",
+          "url": "https://ronbofan.com/insights#scaling-cloud"
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Agile at Scale: Running SAFe Across Distributed Engineering Teams",
+          "author": { "@id": "https://ronbofan.com/#person" },
+          "datePublished": "2026-02-15",
+          "url": "https://ronbofan.com/insights#agile-distributed"
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "The TPM's Guide to Release Engineering: Zero-Downtime Deployments",
+          "author": { "@id": "https://ronbofan.com/#person" },
+          "datePublished": "2026-02-01",
+          "url": "https://ronbofan.com/insights#release-engineering"
+        }
+      ]
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+    <nav class="site-nav">
+        <a href="/" class="logo">Ronbo Fan</a>
+        <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Toggle navigation">☰</button>
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/experience">Experience</a></li>
+            <li><a href="/projects">Projects</a></li>
+            <li><a href="/insights" class="active">Insights</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="page-header">
+        <h1>Insights</h1>
+        <p>Perspectives on technical program management, cloud architecture, and engineering leadership</p>
+    </header>
+
+    <div class="container">
+
+        <section id="scaling-cloud">
+            <h2>Scaling Cloud Infrastructure: Lessons from Enterprise DaaS Deployments</h2>
+            <div class="meta">By Ronbo Fan · March 2026</div>
+
+            <p>Scaling a Desktop-as-a-Service platform to support millions of concurrent enterprise sessions is not a single engineering problem — it is a systems-level orchestration challenge that spans infrastructure provisioning, database optimization, network architecture, and organizational coordination. After leading several major scaling initiatives at Citrix, I've distilled the key lessons that separate successful hyperscale programs from those that stall.</p>
+
+            <h3>1. Capacity Planning Is a Program, Not a Spreadsheet</h3>
+            <p>The most common failure mode in cloud scaling is treating capacity planning as a static exercise. Enterprise workloads are inherently dynamic — seasonal patterns, geographic distribution, and customer onboarding cycles create demand curves that simple projections fail to capture. Effective capacity planning requires continuous feedback loops between performance engineering, customer success, and infrastructure teams.</p>
+            <p>At Citrix, we built an automated capacity forecasting system that ingests real-time telemetry from our cloud control plane, correlates it with historical usage patterns, and generates probabilistic demand forecasts at 30, 60, and 90-day horizons. This system doesn't replace human judgment — it augments it by providing engineering leaders with data-driven confidence intervals rather than gut estimates.</p>
+
+            <h3>2. Multi-Cloud Adds Complexity Exponentially, Not Linearly</h3>
+            <p>Supporting a single cloud provider is straightforward. Supporting two is not twice as hard — it is fundamentally more complex due to divergent APIs, networking models, IAM paradigms, and operational tooling. Every infrastructure abstraction layer introduces subtle behavioral differences that only manifest under production load.</p>
+            <p>The key insight is to invest heavily in a consistent orchestration layer that abstracts provider-specific implementation details while preserving the ability to leverage provider-native capabilities when they offer meaningful performance or cost advantages. Kubernetes has been instrumental in this regard, but it solves only the compute orchestration problem — networking, storage, and identity require dedicated cross-cloud strategies.</p>
+
+            <h3>3. The Program Manager's Role in Scaling</h3>
+            <p>Technical scaling is as much an organizational challenge as it is an engineering one. A TPM's job during a scaling program is to ensure that the blast radius of any single decision is understood, that cross-team dependencies are mapped before they become blockers, and that the program maintains forward velocity even when individual workstreams encounter unexpected obstacles.</p>
+            <p>I've found that the most effective tool for managing scaling programs is the <strong>decision log</strong> — a living document that captures every significant technical decision, the alternatives considered, the rationale for the chosen approach, and the expected implications. This artifact becomes invaluable during post-incident reviews and future program planning.</p>
+        </section>
+
+        <section id="agile-distributed">
+            <h2>Agile at Scale: Running SAFe Across Distributed Engineering Teams</h2>
+            <div class="meta">By Ronbo Fan · February 2026</div>
+
+            <p>Implementing the Scaled Agile Framework (SAFe) in a co-located organization is challenging enough. Doing it across teams distributed across North America, Europe, and Asia-Pacific introduces a qualitatively different set of coordination problems. After leading multiple SAFe implementations at enterprise scale, here are the patterns that consistently drive success.</p>
+
+            <h3>Time Zone Architecture Matters More Than You Think</h3>
+            <p>The most overlooked aspect of distributed agile is the deliberate architecture of team boundaries around timezone overlap windows. When your PI planning ceremony requires participation from teams in San Francisco, Dublin, and Bangalore, you have exactly two hours of viable overlap. Every ceremony, standup, and cross-team sync must be designed around this constraint — not despite it.</p>
+            <p>We restructured our Agile Release Trains (ARTs) to ensure that tightly coupled teams share at least 4 hours of timezone overlap. Teams with weaker coupling were connected through asynchronous dependency protocols — structured handoff documents, recorded decision meetings, and automated CI/CD pipeline notifications that eliminate the need for synchronous coordination on routine matters.</p>
+
+            <h3>PI Planning as a Design Exercise</h3>
+            <p>PI Planning is often treated as a scheduling exercise — "when will Feature X be done?" But the real value of PI Planning is as a system design exercise that surfaces hidden dependencies, capacity constraints, and architectural risks that would otherwise remain invisible until they cause production incidents or missed deadlines.</p>
+            <p>The TPM's role in PI Planning is to create the conditions for honest, productive conversations about capacity and risk. This means establishing psychological safety (teams can say "no" without consequences), providing accurate velocity data (so commitments are grounded in reality), and facilitating dependency resolution in real-time (rather than deferring it to a follow-up meeting that never happens).</p>
+
+            <h3>Metrics That Actually Drive Improvement</h3>
+            <p>Most agile metrics are either vanity metrics (story points completed) or lagging indicators (defect escape rate). The metrics that drive genuine improvement in distributed teams are leading indicators of coordination health: cross-team dependency resolution time, blocker aging, and the ratio of planned-to-unplanned work per sprint. Tracking these metrics consistently provides early warning signals for organizational dysfunction before it manifests as delivery delays.</p>
+        </section>
+
+        <section id="release-engineering">
+            <h2>The TPM's Guide to Release Engineering: Zero-Downtime Deployments</h2>
+            <div class="meta">By Ronbo Fan · February 2026</div>
+
+            <p>In enterprise SaaS, every deployment is a controlled experiment with real consequences for real users. Zero-downtime deployment is not just a technical requirement — it is a business imperative that shapes how programs are planned, how teams are structured, and how risk is managed across the entire software delivery lifecycle.</p>
+
+            <h3>Release Gating as Risk Management</h3>
+            <p>The most effective release management frameworks I've implemented treat each deployment stage as an explicit risk gate. Each gate has clearly defined entry criteria (test coverage thresholds, performance benchmarks, security scan results), an owner who is empowered to halt progression, and automated checks that remove human bias from pass/fail decisions.</p>
+            <p>This approach shifts the conversation from "are we ready to release?" to "has the release met our predefined quality bar?" — a subtle but critical difference that eliminates the social pressure to ship before the code is ready.</p>
+
+            <h3>Canary Deployments and Progressive Rollouts</h3>
+            <p>Progressive deployment strategies — canary releases, blue-green deployments, and feature flag-controlled rollouts — are essential for achieving zero-downtime delivery in complex distributed systems. But the tooling alone is insufficient without the organizational processes to support it.</p>
+            <p>Each canary deployment requires a monitoring playbook that defines the specific metrics to observe, the thresholds that trigger an automatic rollback, and the escalation path when metrics are ambiguous. The TPM's responsibility is to ensure these playbooks exist, are current, and are practiced through regular deployment exercises.</p>
+
+            <h3>Post-Release as a First-Class Program Phase</h3>
+            <p>Too many organizations treat release as the finish line. In reality, the 72 hours following a production deployment are a critical program phase that requires dedicated attention. Post-release monitoring, customer feedback triage, and hotfix readiness are not afterthoughts — they are planned activities with assigned owners and escalation protocols.</p>
+        </section>
+
+    </div>
+
+    <footer>
+        <div class="footer-links">
+            <a href="/about">About</a>
+            <a href="/experience">Experience</a>
+            <a href="/projects">Projects</a>
+            <a href="/insights">Insights</a>
+            <a href="/contact">Contact</a>
+        </div>
+        <p>&copy; 2026 Ronbo Fan. All rights reserved. | <a href="https://ronbofan.com">ronbofan.com</a></p>
+    </footer>
+
+</body>
+</html>
