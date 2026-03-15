@@ -3,24 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Ronbo Fan — Technical Program Manager at Citrix</title>
-    <meta name="description" content="Connect with Ronbo Fan, Technical Program Manager at Citrix. Find professional profiles, social links, and ways to get in touch for speaking, collaboration, or networking.">
+    <title>Contact — Ronbo Fan | Technical Program Manager</title>
+    <meta name="description" content="Connect with Ronbo Fan, Technical Program Manager at Citrix. Reach out for speaking engagements, consulting, mentoring, and open source collaboration.">
     <meta name="author" content="Ronbo Fan">
     <link rel="canonical" href="https://ronbofan.com/contact">
-    <meta property="og:title" content="Contact Ronbo Fan">
-    <meta property="og:description" content="Connect with Ronbo Fan for professional networking, speaking opportunities, or collaboration.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Contact — Ronbo Fan">
+    <meta property="og:description" content="Connect with Ronbo Fan, Technical Program Manager at Citrix. Reach out for speaking engagements, consulting, mentoring, and open source collaboration.">
+    <meta property="og:type" content="website">
     <meta property="og:url" content="https://ronbofan.com/contact">
+    <meta property="og:site_name" content="Ronbo Fan">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Contact — Ronbo Fan">
+    <meta name="twitter:description" content="Connect with Ronbo Fan, Technical Program Manager at Citrix. Reach out for speaking engagements, consulting, mentoring, and open source collaboration.">
+
+    <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
     {
-      "@context": "https://schema.org",
-      "@type": "ContactPage",
-      "@id": "https://ronbofan.com/contact#page",
-      "url": "https://ronbofan.com/contact",
-      "name": "Contact Ronbo Fan",
-      "isPartOf": { "@id": "https://ronbofan.com/#website" },
-      "about": { "@id": "https://ronbofan.com/#person" }
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "ContactPage",
+                "@id": "https://ronbofan.com/contact",
+                "name": "Contact — Ronbo Fan",
+                "description": "Connect with Ronbo Fan, Technical Program Manager at Citrix. Reach out for speaking engagements, consulting, mentoring, and open source collaboration.",
+                "url": "https://ronbofan.com/contact",
+                "isPartOf": {
+                    "@id": "https://ronbofan.com/#website"
+                },
+                "about": {
+                    "@type": "Person",
+                    "name": "Ronbo Fan",
+                    "jobTitle": "Technical Program Manager",
+                    "worksFor": {
+                        "@type": "Organization",
+                        "name": "Citrix"
+                    },
+                    "url": "https://ronbofan.com",
+                    "sameAs": [
+                        "https://www.linkedin.com/in/ronbofan",
+                        "https://github.com/ronbofan",
+                        "https://ronbofan.net"
+                    ]
+                }
+            },
+            {
+                "@type": "BreadcrumbList",
+                "@id": "https://ronbofan.com/contact#breadcrumb",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://ronbofan.com/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Contact",
+                        "item": "https://ronbofan.com/contact"
+                    }
+                ]
+            }
+        ]
     }
     </script>
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -28,86 +81,135 @@
 </head>
 <body>
 
-    <nav class="site-nav">
+    <nav class="site-nav" id="navbar">
         <a href="/" class="logo">Ronbo Fan</a>
-        <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Toggle navigation">☰</button>
-        <ul class="nav-links">
+        <div class="nav-right">
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                <span class="theme-icon"></span>
+            </button>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">&#9776;</button>
+        </div>
+        <ul class="nav-links" id="navLinks">
             <li><a href="/">Home</a></li>
             <li><a href="/about">About</a></li>
             <li><a href="/experience">Experience</a></li>
             <li><a href="/projects">Projects</a></li>
             <li><a href="/insights">Insights</a></li>
-            <li><a href="/contact" class="active">Contact</a></li>
+            <li><a href="/skills">Skills</a></li>
+            <li><a href="/speaking">Speaking</a></li>
+            <li><a href="/contact">Contact</a></li>
         </ul>
     </nav>
 
-    <header class="page-header">
-        <h1>Get in Touch</h1>
-        <p>Open to professional networking, speaking opportunities, and collaboration</p>
-    </header>
-
-    <div class="container">
-
-        <section>
-            <h2>Professional Profiles</h2>
-            <p>The best way to connect with Ronbo Fan is through the following professional platforms:</p>
-            <ul class="links-list">
-                <li>
-                    <a href="https://www.linkedin.com/in/ronbofan">LinkedIn — linkedin.com/in/ronbofan</a>
-                    <span class="link-desc">Primary professional network. Connect for career discussions, industry insights, and networking. Ronbo actively shares content on technical program management and cloud infrastructure.</span>
-                </li>
-                <li>
-                    <a href="https://github.com/ronbofan">GitHub — github.com/ronbofan</a>
-                    <span class="link-desc">Open source contributions, technical projects, and code. Follow for engineering tooling and automation projects.</span>
-                </li>
-            </ul>
+    <main>
+        <section class="page-header">
+            <h1>Get in Touch</h1>
+            <p class="subtitle">Connect with Ronbo Fan for professional collaboration, speaking opportunities, and mentoring</p>
         </section>
 
-        <section>
-            <h2>Speaking & Collaboration</h2>
-            <p>Ronbo Fan is available for speaking engagements, panel discussions, and collaborative projects in the following areas:</p>
-            <ul>
-                <li><strong>Technical Program Management</strong> — best practices, scaling TPM functions, career development</li>
-                <li><strong>Cloud Infrastructure</strong> — hybrid multi-cloud architecture, enterprise DaaS/VDI deployments</li>
-                <li><strong>Agile at Scale</strong> — SAFe implementation, distributed team coordination, PI planning optimization</li>
-                <li><strong>Engineering Leadership</strong> — cross-functional alignment, release engineering, risk management</li>
-                <li><strong>DevOps & Release Engineering</strong> — CI/CD strategy, zero-downtime deployments, progressive rollouts</li>
-            </ul>
-            <p>For speaking inquiries or collaboration proposals, please reach out via <a href="https://www.linkedin.com/in/ronbofan">LinkedIn</a>.</p>
+        <section class="content-section">
+            <h2>Digital Presence</h2>
+            <p>The best way to connect is through professional networks. Whether you are looking to discuss cloud infrastructure strategies, explore speaking opportunities, or collaborate on a project, Ronbo welcomes the conversation.</p>
+
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <h3>LinkedIn</h3>
+                    <a href="https://www.linkedin.com/in/ronbofan" target="_blank" rel="noopener noreferrer">linkedin.com/in/ronbofan</a>
+                    <p>Professional networking and career updates. The best channel for business inquiries, speaking invitations, and staying current on Ronbo's latest work in technical program management and cloud infrastructure.</p>
+                </div>
+
+                <div class="contact-card">
+                    <h3>GitHub</h3>
+                    <a href="https://github.com/ronbofan" target="_blank" rel="noopener noreferrer">github.com/ronbofan</a>
+                    <p>Open source contributions and technical projects. Explore repositories, file issues, or submit pull requests to collaborate on developer tools and infrastructure automation projects.</p>
+                </div>
+
+                <div class="contact-card">
+                    <h3>ronbofan.net</h3>
+                    <a href="https://ronbofan.net" target="_blank" rel="noopener noreferrer">ronbofan.net</a>
+                    <p>Secondary digital presence with additional content and resources across Ronbo's professional portfolio.</p>
+                </div>
+
+                <div class="contact-card">
+                    <h3>Email</h3>
+                    <p>For professional inquiries, the most reliable way to reach Ronbo is through a direct message on <a href="https://www.linkedin.com/in/ronbofan" target="_blank" rel="noopener noreferrer">LinkedIn</a>. All professional messages receive a response within a few business days.</p>
+                </div>
+            </div>
         </section>
 
-        <section>
-            <h2>Other Properties</h2>
-            <p>Ronbo Fan maintains the following additional web properties:</p>
-            <ul class="links-list">
-                <li>
-                    <a href="https://ronbofan.com">ronbofan.com</a>
-                    <span class="link-desc">Primary website — you're here!</span>
-                </li>
-                <li>
-                    <a href="https://ronbofan.net">ronbofan.net</a>
-                    <span class="link-desc">Additional resources and projects</span>
-                </li>
-            </ul>
-        </section>
-
-        <section>
+        <section class="content-section">
             <h2>Location</h2>
-            <p>Based in the <strong>San Francisco Bay Area, California</strong>. Open to remote collaboration with teams and organizations worldwide.</p>
+            <p>Based in the <strong>San Francisco Bay Area, California</strong>. Available for in-person meetings in the Bay Area and open to virtual engagements worldwide.</p>
         </section>
 
-    </div>
+        <section class="content-section">
+            <h2>Collaboration Areas</h2>
+            <p>Ronbo is always open to meaningful professional opportunities that align with his expertise and interests. Here are the areas where he is most actively looking to collaborate:</p>
+
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <h3>Speaking Engagements</h3>
+                    <p>Available for conference talks, panel discussions, and internal tech talks on cloud infrastructure, DaaS/VDI architecture, and agile transformation at scale. Ronbo brings practical, experience-driven content grounded in real enterprise deployments. Visit the <a href="/speaking">speaking page</a> to see past and upcoming engagements.</p>
+                </div>
+
+                <div class="contact-card">
+                    <h3>Advisory & Consulting</h3>
+                    <p>Open to advisory roles and consulting engagements for organizations looking to strengthen their enterprise TPM practices. Focus areas include program governance, cross-functional coordination, release management, and building high-performing TPM organizations from the ground up.</p>
+                </div>
+
+                <div class="contact-card">
+                    <h3>Open Source Collaboration</h3>
+                    <p>Actively interested in contributing to and collaborating on open source developer tools, infrastructure automation, and DevOps toolchains. If you are building tools that help engineering teams ship better software, Ronbo would love to hear about it.</p>
+                </div>
+
+                <div class="contact-card">
+                    <h3>Mentoring</h3>
+                    <p>Passionate about mentoring aspiring technical program managers who are navigating the path from engineering or project management into TPM roles. Ronbo offers guidance on career development, technical depth, stakeholder management, and building the cross-functional influence that defines great TPMs.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2>Learn More</h2>
+            <p>Want to know more before reaching out? Read about Ronbo's <a href="/about">background and philosophy</a>, or explore his <a href="/speaking">speaking engagements</a> to see how he engages with the broader technology community.</p>
+        </section>
+    </main>
 
     <footer>
-        <div class="footer-links">
-            <a href="/about">About</a>
-            <a href="/experience">Experience</a>
-            <a href="/projects">Projects</a>
-            <a href="/insights">Insights</a>
-            <a href="/contact">Contact</a>
+        <div class="footer-content">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Ronbo Fan</h4>
+                    <p>Technical Program Manager at Citrix specializing in cloud infrastructure, DaaS/VDI, and enterprise agile transformation.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Pages</h4>
+                    <a href="/about">About</a>
+                    <a href="/experience">Experience</a>
+                    <a href="/projects">Projects</a>
+                    <a href="/skills">Skills</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Content</h4>
+                    <a href="/insights">Insights</a>
+                    <a href="/speaking">Speaking</a>
+                    <a href="/certifications">Certifications</a>
+                    <a href="/resources">Resources</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Connect</h4>
+                    <a href="https://www.linkedin.com/in/ronbofan">LinkedIn</a>
+                    <a href="https://github.com/ronbofan">GitHub</a>
+                    <a href="https://ronbofan.net">ronbofan.net</a>
+                    <a href="/contact">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Ronbo Fan. All rights reserved. | <a href="https://ronbofan.com">ronbofan.com</a></p>
+            </div>
         </div>
-        <p>&copy; 2026 Ronbo Fan. All rights reserved. | <a href="https://ronbofan.com">ronbofan.com</a></p>
     </footer>
-
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">&#8593;</button>
+    <script src="/script.js"></script>
 </body>
 </html>

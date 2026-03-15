@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agile at Scale: Running SAFe Across Distributed Engineering Teams | Ronbo Fan</title>
+    <meta name="description" content="A practical guide to implementing SAFe (Scaled Agile Framework) across distributed engineering teams. Lessons from rolling out SAFe to 200+ engineers at Citrix, including PI planning, dependency management, and cultural transformation.">
+    <meta name="author" content="Ronbo Fan">
+    <meta name="keywords" content="SAFe, Scaled Agile Framework, agile at scale, PI planning, distributed teams, agile transformation, TPM, Technical Program Manager, Citrix, enterprise agile">
+    <link rel="canonical" href="https://ronbofan.com/insights/agile-at-scale-safe">
+
+    <meta property="og:title" content="Agile at Scale: Running SAFe Across Distributed Engineering Teams">
+    <meta property="og:description" content="A practical guide to implementing SAFe across distributed engineering teams. Lessons from rolling out SAFe to 200+ engineers at Citrix.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://ronbofan.com/insights/agile-at-scale-safe">
+    <meta property="og:site_name" content="Ronbo Fan">
+    <meta property="article:published_time" content="2026-02-15">
+    <meta property="article:author" content="Ronbo Fan">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Agile at Scale: Running SAFe Across Distributed Engineering Teams">
+    <meta name="twitter:description" content="A practical guide to implementing SAFe across distributed engineering teams, with real-world lessons from Citrix.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "BlogPosting",
+                "headline": "Agile at Scale: Running SAFe Across Distributed Engineering Teams",
+                "author": { "@id": "https://ronbofan.com/#person" },
+                "datePublished": "2026-02-15",
+                "dateModified": "2026-02-15",
+                "wordCount": 2200,
+                "description": "A practical guide to implementing SAFe across distributed engineering teams, with lessons from rolling out SAFe to 200+ engineers at Citrix.",
+                "mainEntityOfPage": "https://ronbofan.com/insights/agile-at-scale-safe",
+                "publisher": {
+                    "@type": "Person",
+                    "name": "Ronbo Fan",
+                    "url": "https://ronbofan.com"
+                },
+                "keywords": ["SAFe", "Scaled Agile Framework", "agile transformation", "PI planning", "distributed teams", "enterprise agile"]
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ronbofan.com/" },
+                    { "@type": "ListItem", "position": 2, "name": "Insights", "item": "https://ronbofan.com/insights" },
+                    { "@type": "ListItem", "position": 3, "name": "Agile at Scale", "item": "https://ronbofan.com/insights/agile-at-scale-safe" }
+                ]
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+    <div class="reading-progress"></div>
+
+    <nav class="site-nav" id="navbar">
+        <a href="/" class="logo">Ronbo Fan</a>
+        <div class="nav-right">
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode"><span class="theme-icon"></span></button>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">&#9776;</button>
+        </div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/experience">Experience</a></li>
+            <li><a href="/projects">Projects</a></li>
+            <li><a href="/insights">Insights</a></li>
+            <li><a href="/skills">Skills</a></li>
+            <li><a href="/speaking">Speaking</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="article-header">
+        <div class="container-narrow">
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+                <a href="/">Home</a> &rsaquo; <a href="/insights">Insights</a> &rsaquo; Agile at Scale
+            </nav>
+            <h1>Agile at Scale: Running SAFe Across Distributed Engineering Teams</h1>
+            <div class="article-meta">
+                <span class="meta-item">By <strong>Ronbo Fan</strong></span>
+                <span class="meta-item">February 15, 2026</span>
+                <span class="meta-item">~11 min read</span>
+                <span class="meta-item">2,200+ words</span>
+            </div>
+        </div>
+    </div>
+
+    <main class="container-narrow">
+        <article class="article-content">
+
+            <div class="toc">
+                <h3>Table of Contents</h3>
+                <ol>
+                    <li><a href="#introduction">Introduction: The Promise and Reality of Agile at Scale</a></li>
+                    <li><a href="#why-safe">Why SAFe? Understanding the Framework</a></li>
+                    <li><a href="#implementation-journey">The Implementation Journey</a></li>
+                    <li><a href="#pi-planning">PI Planning: The Heartbeat of SAFe</a></li>
+                    <li><a href="#managing-dependencies">Managing Dependencies Across Teams</a></li>
+                    <li><a href="#metrics-that-matter">Metrics That Matter</a></li>
+                    <li><a href="#cultural-transformation">Cultural Transformation</a></li>
+                    <li><a href="#lessons-from-trenches">Lessons from the Trenches</a></li>
+                    <li><a href="#conclusion">Conclusion</a></li>
+                </ol>
+            </div>
+
+            <section id="introduction">
+                <h2>Introduction: The Promise and Reality of Agile at Scale</h2>
+
+                <p>Every large engineering organization eventually arrives at the same crossroads. Individual scrum teams are delivering, sprints are running, retrospectives are happening, and yet somehow the big picture remains stubbornly opaque. Features that require coordination across three or four teams slip quarter after quarter. Integration points become minefields. Product leadership cannot reliably forecast when capabilities will actually reach customers. The promise of agility, so evident at the team level, evaporates the moment you zoom out.</p>
+
+                <p>This is the scaling problem, and it is far more common than the agile community likes to admit. According to the 16th State of Agile Report, over 60% of organizations pursuing agile transformation cite cross-team coordination as their single greatest challenge. The frameworks exist to solve this exact problem. SAFe, LeSS, Nexus, the Spotify model, Disciplined Agile. But frameworks on paper and frameworks in practice are very different things.</p>
+
+                <p>When I took on the challenge of implementing SAFe at Citrix across a program that would grow to encompass more than 200 engineers, I knew the statistics were against us. Industry data suggests that roughly half of all SAFe implementations fail to deliver their intended benefits within the first 18 months. Teams revert to waterfall patterns dressed in agile language. PI planning events devolve into status theater. The transformation stalls, and cynicism sets in.</p>
+
+                <p>What follows is not a theoretical discussion of how SAFe should work. It is a practical, battle-tested account of how we made it work across distributed teams spanning multiple time zones, navigating resistance from veteran engineers, overcoming tooling gaps, and building an operational rhythm that genuinely improved our delivery cadence by 40% over the course of a year. If you are a Technical Program Manager, engineering leader, or agile coach confronting the scaling challenge, these lessons are for you.</p>
+            </section>
+
+            <div class="key-takeaways">
+                <h3>Key Takeaways</h3>
+                <ul>
+                    <li><strong>Start narrow, expand deliberately.</strong> Begin with a single Agile Release Train before scaling to multiple ARTs. Attempting a big-bang rollout across the entire organization is the single most common cause of SAFe failure.</li>
+                    <li><strong>PI planning is non-negotiable.</strong> It is the mechanism that turns SAFe from a PowerPoint framework into a living operational system. Invest heavily in making PI planning effective, especially for distributed teams.</li>
+                    <li><strong>Dependencies are the enemy.</strong> The primary value of SAFe at scale is making cross-team dependencies visible, manageable, and progressively reducible. If your dependency count is not trending downward over time, something is wrong.</li>
+                    <li><strong>Measure flow, not activity.</strong> Velocity is a team-level planning tool, not a management reporting metric. Focus on flow metrics: cycle time, throughput, work-in-progress limits, and predictability.</li>
+                    <li><strong>Culture eats process.</strong> No framework survives a hostile culture. Invest as much energy in psychological safety, leadership coaching, and engineering excellence as you do in ceremonies and artifacts.</li>
+                </ul>
+            </div>
+
+            <section id="why-safe">
+                <h2>Why SAFe? Understanding the Framework</h2>
+
+                <p>SAFe, the Scaled Agile Framework, is the most widely adopted framework for scaling agile practices beyond individual teams. At its core, SAFe organizes work across four levels: Team, Program, Large Solution, and Portfolio. Each level addresses a different coordination challenge, from sprint-level execution to enterprise strategy alignment.</p>
+
+                <p>At the <strong>Team level</strong>, SAFe is largely indistinguishable from standard Scrum or Kanban. Teams work in iterations, maintain backlogs, and deliver increments. The real differentiation begins at the <strong>Program level</strong>, where multiple teams are organized into an Agile Release Train (ART). An ART is a long-lived team of agile teams, typically 50 to 125 people, aligned to a common mission and synchronized on a cadence. The ART plans together, integrates together, and delivers together in Program Increments, which are typically 8 to 12 weeks long. The <strong>Large Solution level</strong> coordinates multiple ARTs working on a shared product or platform, and the <strong>Portfolio level</strong> connects the work to enterprise strategy through Lean Portfolio Management.</p>
+
+                <p>Before choosing SAFe, I evaluated several alternatives. <strong>LeSS</strong> (Large-Scale Scrum) appealed for its minimalism, stripping away layers and insisting that scaling should mean doing less, not more. However, LeSS works best when teams share a single product backlog, which was not our reality. Our teams owned distinct subsystems with clear architectural boundaries. <strong>Nexus</strong> was a strong candidate for a smaller scope but lacked the portfolio-level constructs we needed to interface with executive planning cycles. The <strong>Spotify model</strong> was fashionable but, as Spotify themselves have acknowledged, it was never intended to be a prescriptive framework and it depends on a very specific engineering culture that cannot be transplanted wholesale.</p>
+
+                <p>The decision criteria that led us to SAFe were straightforward. First, we needed a framework that could accommodate teams with genuinely different cadences. Our infrastructure teams operated on longer cycles than our front-end teams, and we needed a planning mechanism that could synchronize them without forcing identical sprint lengths. Second, we needed portfolio-level visibility because our executives needed to make funding decisions across product lines, and SAFe's Lean Portfolio Management provided a vocabulary and structure for those conversations. Third, pragmatically, SAFe had the largest body of training materials and certified coaches available, which mattered for an organization that needed to upskill rapidly.</p>
+
+                <p>I want to be clear: SAFe is not the right answer for every organization. It carries significant overhead. If you have fewer than 50 engineers working on a single product, you almost certainly do not need SAFe. If your teams are already well-coordinated through informal mechanisms, introducing formal ceremony may destroy more value than it creates. SAFe is a tool for a specific problem: coordinating delivery across multiple teams that share dependencies, timelines, and strategic objectives, where informal coordination has broken down.</p>
+            </section>
+
+            <section id="implementation-journey">
+                <h2>The Implementation Journey</h2>
+
+                <p>Our implementation followed a six-month phased approach, a timeline I chose deliberately. Some organizations attempt to roll out SAFe in a matter of weeks, typically by sending everyone through training and declaring that the next planning event is a PI planning. This approach almost always fails. The ceremony happens, the artifacts are produced, and three weeks later everyone reverts to their previous way of working because nothing in the underlying system has actually changed.</p>
+
+                <p><strong>Phase 1 (Months 1-2): Foundation.</strong> We started with leadership alignment. Before a single team was reorganized, I spent six weeks working with engineering directors and senior managers to build a shared understanding of what SAFe would and would not do. We identified our first Agile Release Train: a group of six teams building our cloud management plane. This was a deliberate choice. These teams had the most painful cross-team dependencies, the most visible delivery problems, and critically, the most open-minded engineering manager. Starting with willing participants is essential. Early adopters create proof points. Skeptics will not be convinced by slides; they need to see their peers succeeding.</p>
+
+                <p>During this phase, we also made critical tooling decisions. We standardized on Jira Align for portfolio-level tracking and configured our existing Jira instance to support ART-level planning. We established a common taxonomy for work items: Epics at the portfolio level, Features at the ART level, Stories at the team level. Getting this hierarchy right before the first PI planning event saved us enormous confusion later.</p>
+
+                <p><strong>Phase 2 (Months 3-4): First PI Planning and Iteration.</strong> We ran our first PI planning event at the start of month three. It was, by any honest assessment, messy. Teams struggled with the concept of planning at the feature level rather than the story level. Dependency identification was incomplete. The planning board was chaotic. But the event accomplished its primary goal: it forced every team to articulate what they intended to deliver over the next ten weeks, to identify where they needed something from another team, and to make those commitments visible. That visibility alone was transformative. Dependencies that had previously been discovered two weeks before a deadline were now surfaced ten weeks in advance.</p>
+
+                <p>We ran the first Program Increment with heavy coaching support. I attended every team's sprint planning for the first two sprints, not to micromanage, but to help them connect their sprint work to their PI commitments. We held weekly ART sync meetings where each team reported on feature progress and flagged risks. The System Demo at the end of each sprint was initially awkward, with teams presenting slides instead of working software, but by the third sprint, we had genuine integrated demos.</p>
+
+                <p><strong>Phase 3 (Months 5-6): Inspect, Adapt, and Expand.</strong> After our first complete PI, we ran a thorough Inspect and Adapt workshop. Our planning accuracy for the first PI was 62%, meaning we delivered 62% of the features we committed to at their planned scope and timeline. This is actually typical for a first PI. By our third PI, we had improved to 81%, and by our sixth, we were consistently above 85%. The key was ruthless honesty in the retrospective. We identified that our two biggest planning errors were underestimating integration testing time and failing to account for unplanned work. We addressed the first by adding explicit integration testing capacity to every team's PI plan, and the second by introducing a capacity buffer, initially 20%, refined down to 12% over time.</p>
+
+                <p>By month six, we expanded to our second ART, incorporating the platform services teams. This expansion was smoother because we had proof points, trained coaches within the first ART who could mentor the newcomers, and battle-tested processes.</p>
+
+                <p><strong>Common mistakes we avoided:</strong> Do not try to implement all of SAFe at once. We deliberately deferred Lean Portfolio Management until our ARTs were running smoothly, which was around month nine. Do not over-customize the framework in the first two PIs. Run it close to the book initially, then adapt based on your own data. Do not let tooling drive process. We saw other organizations spend months configuring Jira Align before ever running a PI planning event. Tools should follow practice, not lead it.</p>
+            </section>
+
+            <section id="pi-planning">
+                <h2>PI Planning: The Heartbeat of SAFe</h2>
+
+                <p>If I had to choose a single element that makes or breaks a SAFe implementation, it would be PI planning. This is the event where the entire ART, every team, every product owner, every stakeholder, gathers for two days to plan the next Program Increment. It is the mechanism that creates alignment, surfaces dependencies, and builds collective commitment. Without effective PI planning, SAFe is just bureaucracy.</p>
+
+                <p>A typical two-day PI planning event in our organization followed this structure. <strong>Day 1, morning:</strong> Business context presentation from product leadership (45 minutes), followed by the architecture vision and technical context from the system architect (30 minutes). Then the product managers presented the top ten features for the PI, prioritized and with acceptance criteria. After lunch, teams broke into their first planning session: drafting their iteration plans, identifying dependencies, and estimating capacity. <strong>Day 1, afternoon:</strong> Teams posted their draft plans on the program board, a physical or virtual board showing features mapped to iterations with dependency strings connecting teams. We ran a "confidence vote" at the end of day one, a fist-of-five where every participant rated their confidence that the plan was achievable. Any vote below three required a stated reason. This vote consistently surfaced issues that would otherwise have gone unspoken.</p>
+
+                <p><strong>Day 2, morning:</strong> Management review and problem-solving. Overnight, the Release Train Engineer (myself, in this case) and the product managers reviewed the draft plans, identified conflicts, and prepared facilitation for the morning session. Teams adjusted their plans based on overnight reflection and the previous day's dependency discussions. <strong>Day 2, afternoon:</strong> Final plan presentation, risk identification and ROAMing (Resolved, Owned, Accepted, Mitigated), final confidence vote, and PI objectives finalization. Each team committed to a set of committed objectives (high confidence) and stretch objectives (lower confidence but valuable if achieved).</p>
+
+                <p>Running this event with distributed teams was our biggest challenge. At Citrix, we had engineers in the United States, India, and Europe. A two-day event that works beautifully when everyone is in one room becomes a logistical puzzle when participants span twelve time zones. Our solution evolved over several PIs. Initially, we attempted a fully synchronous event, running from 7 AM to 1 PM Pacific Time to maximize overlap with India (evening) and Europe (late afternoon). This was exhausting and produced diminishing returns after four hours. By our fourth PI, we moved to a hybrid-async model: synchronous sessions for the opening context, the program board review, and the confidence vote, with asynchronous team planning sessions in between. Teams recorded five-minute video summaries of their plans, which other teams could review on their own schedules. Dependency negotiations happened via dedicated Slack channels with a 4-hour SLA for responses.</p>
+
+                <p>The metrics from our PI planning tell a compelling story. Our planning accuracy, features delivered as committed divided by features committed, improved from 62% in PI 1 to 87% in PI 6. Our commitment-to-delivery ratio for stretch objectives went from 20% to 55%, suggesting that teams were becoming more skilled at estimating and that our capacity buffers were properly calibrated. Perhaps most importantly, the number of dependencies identified during PI planning versus those discovered mid-PI shifted dramatically: from a 40/60 split in our first PI to an 85/15 split by our sixth, meaning we were catching the vast majority of cross-team dependencies during the planning event rather than being surprised by them during execution.</p>
+            </section>
+
+            <section id="managing-dependencies">
+                <h2>Managing Dependencies Across Teams</h2>
+
+                <p>Dependencies are the fundamental challenge of working at scale. If your teams had no dependencies on each other, you would not need a scaling framework at all. The goal is not to eliminate dependencies entirely, which is usually architecturally impossible in the short term, but to make them visible, manageable, and progressively reducible.</p>
+
+                <p>We used three primary mechanisms for dependency management. The first was the <strong>program board</strong>, a visual artifact created during PI planning that maps features to iterations and draws explicit dependency lines between teams. In a physical setting, this is a large wall with sticky notes and yarn. We built a digital equivalent using Miro that persisted between PI planning events and was updated weekly. Every dependency line had an owner, a due date, and a status. The program board was reviewed in its entirety at every ART sync meeting.</p>
+
+                <p>The second mechanism was a <strong>dependency visualization tool</strong> that I built specifically for our context. Our Jira data was rich but difficult to query for cross-team dependencies. I wrote a Python script that extracted linked issues across team projects, classified them by type (blocked-by, required-for, related-to), and generated a directed graph visualization. This graph was published weekly and became one of the most-referenced artifacts in our ART. It showed dependency clusters, highlighting where teams were tightly coupled and where architectural refactoring could reduce coupling. Over the course of a year, we used this data to justify and prioritize three significant architectural decoupling initiatives, each of which reduced cross-team dependencies by 15 to 25%.</p>
+
+                <p>The third mechanism was a structured <strong>escalation framework</strong> for blocked dependencies. When a team identified that a dependency was at risk of being missed, the process was: first, direct team-to-team negotiation with a 48-hour window. If unresolved, escalation to the RTE (myself) and the relevant product managers. If still unresolved within a week, escalation to the engineering directors with a written impact analysis. This framework was rarely needed beyond the first level, but its existence gave teams confidence that blocked dependencies would not simply languish. In practice, fewer than 5% of dependency risks required escalation beyond direct team-to-team negotiation once teams internalized the system.</p>
+
+                <p>Cross-team synchronization beyond PI planning took the form of weekly system demos and a Scrum of Scrums that met three times per week. The Scrum of Scrums was attended by one representative from each team, typically the scrum master or a tech lead, and its sole purpose was to surface and resolve cross-team impediments. We kept it to 15 minutes with a strict format: what did your team integrate since last meeting, what will you integrate before the next meeting, and what is blocking integration. Any topic requiring more than two minutes of discussion was taken offline with the relevant parties.</p>
+            </section>
+
+            <section id="metrics-that-matter">
+                <h2>Metrics That Matter</h2>
+
+                <p>One of the most damaging mistakes in agile transformations is measuring the wrong things. Velocity, the number of story points completed per sprint, is a useful planning tool for individual teams. It is a terrible management metric. The moment velocity becomes a target, teams inflate their estimates, and the metric becomes meaningless. I have seen organizations where average story points per sprint doubled over a year while actual throughput remained flat. Goodhart's Law in action.</p>
+
+                <p>The metrics we focused on fell into four categories. <strong>Flow metrics</strong> measured the health of our delivery pipeline: cycle time (how long from work starting to work deployed), throughput (number of features delivered per PI), work-in-progress (how many items were in active development at any given time), and flow efficiency (active work time divided by total elapsed time, including wait states). These metrics told us whether our system was getting better at delivering value, regardless of how teams estimated their work.</p>
+
+                <p><strong>Predictability metrics</strong> measured our ability to deliver on commitments: PI planning accuracy, sprint goal achievement rate, and variance in delivery timelines. Predictability is arguably more important than raw speed. An organization that reliably delivers on its commitments, even if the velocity is moderate, is far more valuable to its stakeholders than one that occasionally delivers heroic results but cannot be counted on.</p>
+
+                <p><strong>Quality metrics</strong> tracked escaped defects (bugs found in production that should have been caught earlier), defect resolution time, automated test coverage trends, and deployment success rate. We explicitly tied quality metrics to our SAFe implementation because a common failure mode of scaling frameworks is that they optimize for throughput at the expense of engineering quality.</p>
+
+                <p><strong>Satisfaction metrics</strong> captured the human side: team health surveys conducted every PI, engagement scores, and voluntary attrition rates. A transformation that delivers better numbers but burns out its people is not sustainable.</p>
+
+                <p>For executive dashboards, I followed a principle I call "three numbers and a story." Executives do not need 40 charts. They need three leading indicators and a narrative that explains what those indicators mean for business outcomes. Our executive dashboard showed: PI predictability percentage, average feature cycle time, and escaped defect trend. Each metric had a one-sentence annotation explaining the current trajectory. This approach consistently received positive feedback from leadership because it respected their time while providing genuine insight.</p>
+            </section>
+
+            <section id="cultural-transformation">
+                <h2>Cultural Transformation</h2>
+
+                <p>No framework survives contact with a hostile culture. This is the lesson that every agile transformation eventually teaches, usually painfully. You can implement every SAFe ceremony, produce every artifact, and configure every tool, and still fail completely if the underlying culture does not support transparency, collaboration, and continuous improvement.</p>
+
+                <p>The cultural challenges we faced were not unique, but they were real. Senior engineers who had been successful for decades resisted what they perceived as unnecessary process overhead. "I know how to build software," was a common refrain. "I don't need a two-day planning event to tell me what to do." Managers who had built their careers on being the single point of information flow felt threatened by the transparency that SAFe demanded. If everyone can see the program board, what is the manager's role?</p>
+
+                <p>Our approach to cultural transformation had three pillars. The first was <strong>psychological safety</strong>. We explicitly named it, trained on it, and measured it. In every retrospective, the first question was: "Is there anything that felt unsafe to say in the last sprint?" We normalized failure by celebrating "productive failures," instances where a team tried something, failed, learned, and improved. I personally modeled vulnerability by sharing my own mistakes in ART-level forums. When the RTE admits that their dependency tracking process missed a critical link, it gives permission for everyone else to be honest about their own gaps.</p>
+
+                <p>The second pillar was <strong>leadership coaching</strong>. We invested in one-on-one coaching for every engineering manager and director involved in the transformation. The coaching focused on a shift in mental model: from manager-as-controller to manager-as-enabler. The most effective leaders in a SAFe environment are those who clear impediments, secure resources, and shield teams from organizational noise, not those who direct daily work. This shift is genuinely difficult for people who were promoted because of their technical expertise and their ability to make decisions. Letting go of decision-making authority, trusting the teams, and focusing on creating the conditions for success requires a fundamentally different leadership identity.</p>
+
+                <p>The third pillar was <strong>technical excellence</strong>. Process change without technical change is cosmetic. We invested heavily in automated testing infrastructure, continuous integration pipelines, and deployment automation. If a team cannot deploy independently, no amount of agile process will make them agile. We established a Community of Practice for DevOps that met biweekly, sharing tooling improvements and deployment patterns across teams. By the end of our first year, every team in the ART could deploy to a staging environment independently within 30 minutes, down from a process that previously required a dedicated release engineer and a two-day window.</p>
+            </section>
+
+            <section id="lessons-from-trenches">
+                <h2>Lessons from the Trenches</h2>
+
+                <p><strong>Lesson 1: Your first PI planning will feel like chaos. That is normal.</strong> I have spoken with dozens of RTEs and agile coaches, and every single one describes their first PI planning event in similar terms: overwhelming, confusing, and exhausting. The temptation is to conclude that the process is broken. It is not. The chaos you are experiencing is the reality of your organization's complexity becoming visible for the first time. Previously, that complexity was hidden in email threads, hallway conversations, and individual heads. PI planning puts it on the wall. The discomfort is the point. By the third PI, teams will navigate the event with fluency, and you will wonder how you ever coordinated without it.</p>
+
+                <p><strong>Lesson 2: Protect the timebox ruthlessly.</strong> Every ceremony in SAFe has a defined timebox, and the single most corrosive habit is allowing events to run over. When a retrospective routinely takes 90 minutes instead of 60, people stop coming prepared. When PI planning stretches to three days instead of two, the incremental hours produce diminishing returns and increasing resentment. I enforced timeboxes with visible timers and a willingness to cut discussions short. Topics that could not be resolved within the allocated time were captured on a parking lot board and addressed in dedicated follow-up sessions. This discipline sent a signal: we respect your time, and we expect you to use it effectively.</p>
+
+                <p><strong>Lesson 3: The Scrum of Scrums is either your most valuable meeting or your biggest waste of time.</strong> There is no middle ground. An effective Scrum of Scrums surfaces cross-team impediments in real time and resolves them within days. An ineffective one becomes a status reporting meeting where representatives read updates that could have been an email. The difference is facilitation discipline. I kept our Scrum of Scrums to 15 minutes, enforced the three-question format, and ended the meeting early if there were no impediments to discuss. If your Scrum of Scrums routinely runs its full timebox with no actionable outcomes, redesign it or cancel it.</p>
+
+                <p><strong>Lesson 4: Invest in your Release Train Engineer like you would a staff engineer.</strong> The RTE role is chronically undervalued and under-resourced. Organizations often assign it as a part-time responsibility to a scrum master or project manager, then wonder why the ART is not functioning. An effective RTE needs deep technical understanding (to evaluate risk), strong facilitation skills (to run PI planning and resolve conflicts), data literacy (to build and interpret metrics), and organizational credibility (to escalate and influence). At Citrix, the RTE role was a full-time position with a level and compensation commensurate with a senior engineering manager. This investment paid for itself many times over in improved coordination and faster impediment resolution.</p>
+
+                <p><strong>Lesson 5: Reduce dependencies, do not just manage them.</strong> Dependency management is necessary but insufficient. Every dependency is a coordination cost, a potential point of failure, and a constraint on team autonomy. While SAFe provides excellent tools for managing dependencies, the long-term goal should be to reduce them through architectural evolution. We used our dependency data to identify the highest-cost coupling points and systematically invested in API contracts, service boundaries, and interface abstractions that allowed teams to work independently. Over 18 months, we reduced cross-team dependencies per PI by 35%, which had a direct and measurable impact on planning accuracy and delivery speed.</p>
+
+                <p><strong>Lesson 6: Celebrate the process wins, not just the delivery wins.</strong> When a team identifies a risk early and mitigates it before it becomes a crisis, that is a win worth celebrating. When a dependency is resolved through direct team-to-team negotiation without escalation, that is a sign of organizational maturity. When a retrospective produces a concrete action item that is implemented in the next sprint, that is continuous improvement in action. These process wins are the leading indicators that predict sustained delivery improvement. If you only celebrate shipped features, you are reinforcing outcome bias and missing the system-level improvements that make those outcomes possible.</p>
+            </section>
+
+            <section id="conclusion">
+                <h2>Conclusion</h2>
+
+                <p>Scaling agile is a journey, not a destination. After more than a year of running SAFe across multiple ARTs at Citrix, I can say with confidence that the framework delivers on its promise, but only if you treat it as a starting point rather than a prescription. The ceremonies and artifacts provide structure, but the real value comes from the behaviors they enable: transparency, collaboration, collective commitment, and relentless improvement.</p>
+
+                <p>If you are at the beginning of this journey, I would leave you with three pieces of advice. First, start small and prove value before scaling. One successful ART is worth more than five struggling ones. Second, invest in people before process. Train your leaders, coach your teams, build psychological safety. The framework is useless without the culture to support it. Third, measure what matters and be honest about what the data tells you. Vanity metrics are the enemy of genuine improvement.</p>
+
+                <p>The organizations that succeed at scaling agile are not the ones that implement the framework most faithfully. They are the ones that learn most rapidly, adapt most honestly, and never stop asking: "How can we get better at getting better?" That question, more than any framework, is the heart of agility at scale.</p>
+            </section>
+
+            <div class="related-articles">
+                <h3>Related Articles</h3>
+                <div class="related-grid">
+                    <a href="/insights/tpm-dependency-management" class="related-card">
+                        <h4>The TPM's Guide to Dependency Management</h4>
+                        <p>Practical strategies for identifying, tracking, and resolving cross-team dependencies in complex engineering programs.</p>
+                    </a>
+                    <a href="/insights/scaling-cloud-infrastructure" class="related-card">
+                        <h4>Scaling Cloud Infrastructure</h4>
+                        <p>Lessons from scaling cloud-native platforms to handle enterprise workloads with reliability and performance.</p>
+                    </a>
+                </div>
+            </div>
+
+        </article>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-grid">
+                <div class="footer-col"><h4>Ronbo Fan</h4><p>Technical Program Manager at Citrix specializing in cloud infrastructure, DaaS/VDI, and enterprise agile transformation.</p></div>
+                <div class="footer-col"><h4>Pages</h4><a href="/about">About</a><a href="/experience">Experience</a><a href="/projects">Projects</a><a href="/skills">Skills</a></div>
+                <div class="footer-col"><h4>Content</h4><a href="/insights">Insights</a><a href="/speaking">Speaking</a><a href="/certifications">Certifications</a><a href="/resources">Resources</a></div>
+                <div class="footer-col"><h4>Connect</h4><a href="https://www.linkedin.com/in/ronbofan">LinkedIn</a><a href="https://github.com/ronbofan">GitHub</a><a href="https://ronbofan.net">ronbofan.net</a><a href="/contact">Contact</a></div>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2026 Ronbo Fan. All rights reserved. | <a href="https://ronbofan.com">ronbofan.com</a></p></div>
+        </div>
+    </footer>
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">&#8593;</button>
+    <script src="/script.js"></script>
+</body>
+</html>
